@@ -1,26 +1,28 @@
-# boxkit
+# EDC - Everyday Carry for Linux Users
 
-A base image and action for Toolbx and Distrobox.
-Sure, you can use the distro you're used to, but what if ... 
+> "A man and his tools make a man and his trade"
+>
+> -Vita Sackville-West
 
-This image is going to experiment with what a "born from cloud native" UNIX terminal experience would look like. 
+> "We shape our tools and then the tools shape us"
+>
+> -Winston Churchill
+
+My personal base image [toolbox](https://github.com/containers/toolbox). 
 It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/utilities/) and designed to be the companion terminal experience for cloud-native desktops. 
-We're starting small but have big aspirations.
 
 - Starts with the latest Alpine image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
 - Adds some quality of life
   - `starship` prompt for that <3
-  - `just` for task execution
+  - `ranger` file manager
   - `chezmoi` for dotfile management
   - `btop` for process management
-  - `micro` and `helix` text editors
-  - [clipboard](https://github.com/Slackadays/Clipboard) to cut, copy, and paste anything, anywhere, all from the terminal! 
-  - `python3` 
-  - Some common power tools: `plocate`, `fzf`, `cosign`, `ripgrep`, `github-cli`, and `ffmpeg`
-  - CLI tools recommended by [rawkode](https://www.youtube.com/watch?v=TNlDSG1iDW8)
-    - [zellij](https://github.com/zellij-org/zellij) - terminal workspace
-    - [direnv](https://direnv.net/) - environment variable extension for your shell 
-    - [atuin](https://github.com/ellie/atuin) - magical shell history
+  - `python3`
+  - `julia`
+  - `rust`
+  - `tectonic` for minimal latex tool
+  - `yt-dlp` to watch your stuff
+  - Some common power tools: `plocate`, `fzf`, `cosign`, `ripgrep`, `detox` and `ffmpeg`
 - Host Management QoL
   - These are meant for occasional one off commands, not complex workflows
     - Auto symlink the flatpak, podman, and docker commands
@@ -33,18 +35,26 @@ We're starting small but have big aspirations.
 
 If you use distrobox:
 
-    distrobox create -i ghcr.io/ublue-os/boxkit -n boxkit
-    distrobox enter boxkit
+    distrobox create -i ghcr.io/storopoli/edc -n dev
+    distrobox enter dev
     
 If you use toolbx:
 
-    toolbox create -i ghcr.io/ublue-os/boxkit -c boxkit
-    toolbox enter boxkit
+    toolbox create -i ghcr.io/storopoli/edc -c dev
+    toolbox enter dev
+
+Aditionally, you need a nerdfont-patched font.
+I use `Hack`:
+
+    mkdir -p "$HOME/.local/share/fonts"
+    curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+    unzip -d "$HOME/.local/share/fonts" Hack*.zip "*.ttf"
+    rm Hack*.zip
+    fc-cache -f -v
 
 ### Pull down your config
 
 Use `chezmoi` to pull down your dotfiles and set up git sync.
-
 
 ### Make your own
 
@@ -76,7 +86,7 @@ Also apk is fast. Watch the video for more!
 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
-    cosign verify --key cosign.pub ghcr.io/ublue-os/boxkit
+    cosign verify --key cosign.pub ghcr.io/storopoli/edc
     
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign. The public key can be in your public repo (your users need it to check the signatures), and you can paste the private key in Settings -> Secrets -> Actions.
 
@@ -95,5 +105,3 @@ Of course you can make this however you want, but start with the [Toolbx Communi
 These are a set of mostly-stock images with packages needed to run as a toolbox/distrobox already installed. 
 
 Try to derive your blingbox from those base images so we can all help maintain them over time, you can't have bling without good stock!
-
-Tag your image with `boxkit` to share with others!
