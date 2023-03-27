@@ -13,11 +13,13 @@ ENV JULIA_VERSION=1.8.5
 RUN /bin/sh -c set -eux; apk add --no-cache --virtual .fetch-deps gnupg; arch="$(apk --print-arch)"; url='https://julialang-s3.julialang.org/bin/musl/x64/1.8/julia-1.8.5-musl-x86_64.tar.gz'; wget -O julia.tar.gz.asc "$url.asc"; wget -O julia.tar.gz "$url"; export GNUPGHOME="$(mktemp -d)"; gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; gpg --batch --verify julia.tar.gz.asc julia.tar.gz; command -v gpgconf > /dev/null && gpgconf --kill all; rm -rf "$GNUPGHOME" julia.tar.gz.asc; mkdir "$JULIA_PATH"; tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; rm julia.tar.gz; apk del --no-network .fetch-deps
 RUN ln -s $JULIA_PATH/bin/julia /usr/local/bin/julia
 
-COPY extra-packages /
+COPY extra-packages extra-packages-testing npm-packages /
 RUN apk update && \
     apk upgrade && \
-    grep -v '^#' /extra-packages | xargs apk add
-RUN rm /extra-packages
+    grep -v '^#' /extra-packages | xargs apk add --no-cache
+RUN grep -v '^#' /extra-packages-testing | xargs apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/
+RUN grep -v '^#' /npm-packages | xargs npm i -g
+RUN rm /extra-packages /extra-packages-testing /npm-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
