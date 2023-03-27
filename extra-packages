@@ -31,7 +31,6 @@ shellcheck
 starship
 stylua
 tectonic
-tree-sitter
 #vim
 wl-clipboard
 yt-dlp
