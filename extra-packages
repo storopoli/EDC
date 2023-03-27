@@ -1,28 +1,38 @@
 btop
-#build-base # for neovim tree-sitter
+build-base # for neovim tree-sitter
 bat
+black
 chezmoi
+clang
 clipboard
 cosign
 dbus-x11
-#detox # still in testing repo
 ffmpeg
 fzf
+jq
+lazygit
+lldb
 make
 ncdu
 ncurses
 neofetch
-#neovim
+neovim
 npm
 parallel
 plocate
+prettier
 python3
 ranger
 rust
+rust-analyzer
+rustfmt
 ripgrep
+shellcheck
 starship
+stylua
 tectonic
-vim
+tree-sitter
+#vim
 wl-clipboard
 yt-dlp
 zstd
