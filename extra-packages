@@ -3,12 +3,14 @@ build-base
 bat
 black
 chezmoi
-clang
+clang-extra-tools
 clipboard
 cosign
 dbus-x11
 ffmpeg
 fzf
+go
+gopls
 jq
 lazygit
 lldb
