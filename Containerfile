@@ -16,9 +16,9 @@ RUN ln -s $JULIA_PATH/bin/julia /usr/local/bin/julia
 COPY extra-packages extra-packages-testing npm-packages /
 RUN apk update && \
     apk upgrade && \
-    grep -v '^#' /extra-packages | xargs apk add --no-cache
-RUN grep -v '^#' /extra-packages-testing | xargs apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/
-RUN grep -v '^#' /npm-packages | xargs npm i -g
+    grep -v '^#' /extra-packages | xargs -I '{}' apk add --no-cache "{}"
+RUN grep -v '^#' /extra-packages-testing | xargs -I '{}' apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ "{}"
+RUN grep -v '^#' /npm-packages | xargs -I '{}' npm i -g "{}"
 RUN rm /extra-packages /extra-packages-testing /npm-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
