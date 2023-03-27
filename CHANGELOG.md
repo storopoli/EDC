@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/storopoli/EDC/compare/v1.0.0...v1.1.0) (2023-03-27)
+
+
+### Features
+
+* clangd go gopls ([#5](https://github.com/storopoli/EDC/issues/5)) ([ca7c66e](https://github.com/storopoli/EDC/commit/ca7c66e6490b5799a0479755b570ac4137b37324))
+* nvim with language-servers ([#4](https://github.com/storopoli/EDC/issues/4)) ([95a6c02](https://github.com/storopoli/EDC/commit/95a6c024f407fc7af569289e4d8e1d32ba38511d))
+
+
+### Bug Fixes
+
+* release-please.yml action ([#6](https://github.com/storopoli/EDC/issues/6)) ([ed2028e](https://github.com/storopoli/EDC/commit/ed2028e688b773c59a5e18c19c5b3e6432dbb6bf))
+* replace neovim for vim ([#3](https://github.com/storopoli/EDC/issues/3)) ([78af3ed](https://github.com/storopoli/EDC/commit/78af3ede75789576656745ba68ae93d70a3feba6))
+
 ## 1.0.0 (2023-02-04)
 
 
