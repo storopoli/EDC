@@ -1,5 +1,5 @@
 btop
-build-base # for neovim tree-sitter
+build-base
 bat
 black
 chezmoi
@@ -20,7 +20,6 @@ neovim
 npm
 parallel
 plocate
-prettier
 python3
 ranger
 rust
@@ -31,6 +30,7 @@ shellcheck
 starship
 stylua
 tectonic
+tree-sitter
 #vim
 wl-clipboard
 yt-dlp

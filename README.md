@@ -14,12 +14,15 @@ It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/uti
 - Starts with the latest Alpine image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
 - Adds some quality of life
   - `starship` prompt for that <3
+  - `neovim` with lots of language servers, linters and debugs
   - `ranger` file manager
   - `chezmoi` for dotfile management
   - `btop` for process management
   - `python3`
   - `julia`
   - `rust`
+  - `go`
+  - `lazygit` git management CLI
   - `tectonic` for minimal latex tool
   - `yt-dlp` to watch your stuff
   - Some common power tools: `plocate`, `fzf`, `cosign`, `ripgrep`, `detox` and `ffmpeg`
