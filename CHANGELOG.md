@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/storopoli/EDC/compare/v1.1.0...v1.2.0) (2023-03-28)
+
+
+### Features
+
+* vim only minimalistc ([#8](https://github.com/storopoli/EDC/issues/8)) ([4833bea](https://github.com/storopoli/EDC/commit/4833bea464902e4edf80a63c9208da21ee355b62))
+
 ## [1.1.0](https://github.com/storopoli/EDC/compare/v1.0.0...v1.1.0) (2023-03-27)
 
 
