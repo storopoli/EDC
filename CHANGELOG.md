@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/storopoli/EDC/compare/v1.2.0...v1.2.1) (2023-03-28)
+
+
+### Bug Fixes
+
+* add perl for fzf bash integration ([#12](https://github.com/storopoli/EDC/issues/12)) ([7d0313d](https://github.com/storopoli/EDC/commit/7d0313d1e79abf2c687d6dc52348bada98f319df))
+* ranger depends on file ([#10](https://github.com/storopoli/EDC/issues/10)) ([8076ce7](https://github.com/storopoli/EDC/commit/8076ce75721792f9e08cdc230b97ad6e7db339d5))
+
 ## [1.2.0](https://github.com/storopoli/EDC/compare/v1.1.0...v1.2.0) (2023-03-28)
 
 
