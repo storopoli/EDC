@@ -11,6 +11,7 @@ fzf
 make
 ncurses
 neofetch
+perl
 plocate
 python3
 ranger
