@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/storopoli/EDC/compare/v1.2.1...v2.0.0) (2023-03-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* archlinux migration ([#13](https://github.com/storopoli/EDC/issues/13))
+
+### Features
+
+* archlinux migration ([#13](https://github.com/storopoli/EDC/issues/13)) ([2265dbd](https://github.com/storopoli/EDC/commit/2265dbd242a6a24c62ec58c7016477d067d3cddb))
+
 ## [1.2.1](https://github.com/storopoli/EDC/compare/v1.2.0...v1.2.1) (2023-03-28)
 
 
