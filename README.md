@@ -11,18 +11,16 @@
 My personal base image [toolbox](https://github.com/containers/toolbox). 
 It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/utilities/) and designed to be the companion terminal experience for cloud-native desktops. 
 
-- Starts with the latest Alpine image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
+- Starts with the latest Arch Linux image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
 - Adds some quality of life
   - `starship` prompt for that <3
-  - `neovim` with lots of language servers, linters and debugs
+  - `vim` for text editor
   - `ranger` file manager
   - `chezmoi` for dotfile management
   - `btop` for process management
+  - `mdp` for slides in your terminal
   - `python3`
   - `julia`
-  - `rust`
-  - `go`
-  - `lazygit` git management CLI
   - `tectonic` for minimal latex tool
   - `yt-dlp` to watch your stuff
   - Some common power tools: `plocate`, `fzf`, `cosign`, `ripgrep`, `detox` and `ffmpeg`
@@ -45,15 +43,6 @@ If you use toolbx:
 
     toolbox create -i ghcr.io/storopoli/edc -c dev
     toolbox enter dev
-
-Aditionally, you need a nerdfont-patched font.
-I use `Hack`:
-
-    mkdir -p "$HOME/.local/share/fonts"
-    curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
-    unzip -d "$HOME/.local/share/fonts" Hack*.zip "*.ttf"
-    rm Hack*.zip
-    fc-cache -f -v
 
 ### Pull down your config
 
