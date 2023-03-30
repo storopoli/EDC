@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/storopoli/EDC/compare/v2.0.0...v2.1.0) (2023-03-30)
+
+
+### Features
+
+* neovim LSPs ([#15](https://github.com/storopoli/EDC/issues/15)) ([379ee62](https://github.com/storopoli/EDC/commit/379ee62c985f2e67b54156f900677420feac3566))
+
 ## [2.0.0](https://github.com/storopoli/EDC/compare/v1.2.1...v2.0.0) (2023-03-28)
 
 
