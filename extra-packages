@@ -27,7 +27,7 @@ neofetch
 neovim
 parallel
 perl
-plocate
+#plocate
 prettier
 pyright
 python3
