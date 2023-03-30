@@ -42,6 +42,7 @@ shellcheck
 starship
 stylua
 tectonic
+texlab
 tree-sitter
 tmux
 vim
