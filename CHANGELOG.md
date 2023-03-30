@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/storopoli/EDC/compare/v2.1.0...v2.1.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* texlab lsp as extra-packages ([#17](https://github.com/storopoli/EDC/issues/17)) ([2e2765d](https://github.com/storopoli/EDC/commit/2e2765da81d9781287445b5defdf6f850bcea0bd))
+
 ## [2.1.0](https://github.com/storopoli/EDC/compare/v2.0.0...v2.1.0) (2023-03-30)
 
 
