@@ -12,7 +12,7 @@ RUN rm -rf /var/cache
 
 RUN   mkdir -p /usr/share/fonts/NerdFontsSymbolsOnly && \
       curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/NerdFontsSymbolsOnly.zip && \
-      unzip -d "$HOME/.local/share/fonts/NerdFontsSymbolsOnly" NerdFonts*.zip "*.ttf" && \
+      unzip -d /usr/share/fonts/NerdFontsSymbolsOnly NerdFonts*.zip "*.ttf" && \
       rm NerdFonts*.zip && \
       fc-cache -f -v
 
