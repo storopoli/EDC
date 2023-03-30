@@ -1,4 +1,4 @@
-name: build-push-edc
+name: build-edc
 on:
   pull_request:
     branches:
