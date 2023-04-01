@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/storopoli/EDC/compare/v2.1.1...v2.2.0) (2023-04-01)
+
+
+### Features
+
+* dependencies only on archlinux docker image ([#20](https://github.com/storopoli/EDC/issues/20)) ([2fc132f](https://github.com/storopoli/EDC/commit/2fc132f7c4c1a2fb7a477ac404dd7f3480edaa3c))
+
 ## [2.1.1](https://github.com/storopoli/EDC/compare/v2.1.0...v2.1.1) (2023-03-30)
 
 
