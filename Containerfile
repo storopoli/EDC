@@ -23,6 +23,10 @@ RUN   mkdir -p /usr/share/fonts/NerdFontsSymbolsOnly && \
 # enable sudo permission for wheel users
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/toolbox
 
+# enable zsh for storopoli user
+RUN echo "storopoli::1000:1000:Jose Storopoli:/var/home/storopoli:/bin/zsh" >> /etc/passwd
+
+# some distrobox links to host binaries
 RUN   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
