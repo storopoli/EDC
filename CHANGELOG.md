@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/storopoli/EDC/compare/v2.2.0...v2.3.0) (2023-04-02)
+
+
+### Features
+
+* zshrc lf and sway goodies ([#22](https://github.com/storopoli/EDC/issues/22)) ([28b516e](https://github.com/storopoli/EDC/commit/28b516e4b404416e3e5bd39e8987d4346e00c313))
+
 ## [2.2.0](https://github.com/storopoli/EDC/compare/v2.1.1...v2.2.0) (2023-04-01)
 
 
