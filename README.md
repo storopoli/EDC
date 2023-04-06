@@ -34,12 +34,12 @@ It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/uti
 
 ### Create Box
 
-If you use distrobox:
+If you use `distrobox`:
 
     distrobox create -i ghcr.io/storopoli/edc -n dev
     distrobox enter dev
     
-If you use toolbx:
+If you use `toolbox`:
 
     toolbox create -i ghcr.io/storopoli/edc -c dev
     toolbox enter dev
@@ -68,11 +68,8 @@ And of course, as the user space for a cloud-native desktop the biggest reason i
 
 Also, I've never gotten really to know Alpine, the problem with running distros like this bare metal on my PC is that there's a whole bunch of hardware quirks and all sorts of little enablement things that more generalized distros tend to get right. 
 
-But in a Toolbx/Distrobox world the kernel and anything that talks to hardware is handled by the host operating system.
+But in a Toolbox/Distrobox world the kernel and anything that talks to hardware is handled by the host operating system.
 This let's us concentrate on just the CLI experience, get yourself some of that UNIX bling.
-Also apk is fast. Watch the video for more!
-
-[![Video Recording](https://img.youtube.com/vi/7-FPAWjROos/0.jpg)](https://youtu.be/7-FPAWjROos)
 
 ## Verification
 
@@ -81,15 +78,6 @@ These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosi
     cosign verify --key cosign.pub ghcr.io/storopoli/edc
     
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign. The public key can be in your public repo (your users need it to check the signatures), and you can paste the private key in Settings -> Secrets -> Actions.
-
-## Scope and Cynicism
-
-I know what you're thinking, we're just going to shove everything from [Modern UNIX](https://github.com/ibraheemdev/modern-unix) in there and it's going to look like a glitter explosion. 
-
-That's why I'm going to be strongly opinionated, so use this as a base to build your own perfect CLI experience. 
-Custom configs are NOT included, those belong in your dotfiles, use them in combination with an image. 
-
-This is a tame first effort, one of you out there is going to make something better than this, the perfect CLI workspace, I salute you. 
 
 ## Finding Good Base Images
 
