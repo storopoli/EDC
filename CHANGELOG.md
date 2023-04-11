@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/storopoli/EDC/compare/v2.4.0...v2.4.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* locale in toolbox ([#28](https://github.com/storopoli/EDC/issues/28)) ([fe8a1a6](https://github.com/storopoli/EDC/commit/fe8a1a6992f5ab606cec8a2986466453e95a4a7a))
+
 ## [2.4.0](https://github.com/storopoli/EDC/compare/v2.3.0...v2.4.0) (2023-04-11)
 
 
