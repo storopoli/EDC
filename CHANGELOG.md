@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.0](https://github.com/storopoli/EDC/compare/v2.3.0...v2.4.0) (2023-04-11)
+
+
+### Features
+
+* nvim with LazyVim config ([#27](https://github.com/storopoli/EDC/issues/27)) ([90822ba](https://github.com/storopoli/EDC/commit/90822bae3fdbca3441153c3cd2b1756d26df97d9))
+* revert back to vim ([#24](https://github.com/storopoli/EDC/issues/24)) ([821594c](https://github.com/storopoli/EDC/commit/821594c5b905d591f19024f320f132c93ff4157a))
+
 ## [2.3.0](https://github.com/storopoli/EDC/compare/v2.2.0...v2.3.0) (2023-04-02)
 
 
