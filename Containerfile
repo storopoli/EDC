@@ -23,6 +23,9 @@ RUN   mkdir -p /usr/share/fonts/NerdFontsSymbolsOnly && \
 # enable sudo permission for wheel users
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/toolbox
 
+# fix locale stuff in toolbox
+RUN echo en_US.UTF-8 UTF-8 > /etc/locale.gen && locale-gen
+
 # enable zsh for storopoli user
 RUN echo "storopoli::1000:1000:Jose Storopoli:/var/home/storopoli:/bin/zsh" >> /etc/passwd
 
