@@ -8,13 +8,13 @@
 >
 > -Winston Churchill
 
-My personal base image [toolbox](https://github.com/containers/toolbox). 
-It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/utilities/) and designed to be the companion terminal experience for cloud-native desktops. 
+My personal base image [toolbox](https://github.com/containers/toolbox).
+It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/utilities/) and designed to be the companion terminal experience for cloud-native desktops.
 
 - Starts with the latest Arch Linux image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
 - Adds some quality of life
   - `starship` prompt for that <3
-  - `vim` for text editor
+  - `nvim` for text editor with LSP configured
   - `ranger` file manager
   - `chezmoi` for dotfile management
   - `btop` for process management
@@ -38,7 +38,7 @@ If you use `distrobox`:
 
     distrobox create -i ghcr.io/storopoli/edc -n dev
     distrobox enter dev
-    
+
 If you use `toolbox`:
 
     toolbox create -i ghcr.io/storopoli/edc -c dev
@@ -53,7 +53,7 @@ Use `chezmoi` to pull down your dotfiles and set up git sync.
 Fork and add programs to this this image - over time you'll end up with the perfect CLI for you.
 Keeping it as a pet works, though the author recommends leaving all your config in git and routinely pulling a new image.
 
-The user experience is much nicer if you [set your terminal open right in the container](https://distrobox.privatedns.org/useful_tips.html#using-distrobox-as-main-cli) and is the intended experience. 
+The user experience is much nicer if you [set your terminal open right in the container](https://distrobox.privatedns.org/useful_tips.html#using-distrobox-as-main-cli) and is the intended experience.
 
 ## Why?
 
@@ -66,7 +66,7 @@ While LTS images pay the bills they move at that pace for a reason, I wanted:
 
 And of course, as the user space for a cloud-native desktop the biggest reason is it's everywhere in the stack, why not be the "default terminal"?
 
-Also, I've never gotten really to know Alpine, the problem with running distros like this bare metal on my PC is that there's a whole bunch of hardware quirks and all sorts of little enablement things that more generalized distros tend to get right. 
+Also, I've never gotten really to know Alpine, the problem with running distros like this bare metal on my PC is that there's a whole bunch of hardware quirks and all sorts of little enablement things that more generalized distros tend to get right.
 
 But in a Toolbox/Distrobox world the kernel and anything that talks to hardware is handled by the host operating system.
 This let's us concentrate on just the CLI experience, get yourself some of that UNIX bling.
@@ -76,12 +76,12 @@ This let's us concentrate on just the CLI experience, get yourself some of that 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
     cosign verify --key cosign.pub ghcr.io/storopoli/edc
-    
+
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets) on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/) with cosign. The public key can be in your public repo (your users need it to check the signatures), and you can paste the private key in Settings -> Secrets -> Actions.
 
 ## Finding Good Base Images
 
 Of course you can make this however you want, but start with the [Toolbx Community images](https://github.com/toolbx-images/images).
-These are a set of mostly-stock images with packages needed to run as a toolbox/distrobox already installed. 
+These are a set of mostly-stock images with packages needed to run as a toolbox/distrobox already installed.
 
 Try to derive your blingbox from those base images so we can all help maintain them over time, you can't have bling without good stock!
