@@ -14,16 +14,16 @@ It is used in conjuction with a [dotfile manager](https://dotfiles.github.io/uti
 - Starts with the latest Arch Linux image from the [Toolbx Community Images](https://github.com/toolbx-images/images)
 - Adds some quality of life
   - `zsh` prompt for that <3
-  - `nvim` for text editor with LSP configured
-  - `ranger` file manager
   - `chezmoi` for dotfile management
   - `btop` for process management
-  - `mdp` for slides in your terminal
   - `python3`
   - `julia`
+  - `rust`
+  - `go`
+  - `typescript`
   - `tectonic` for minimal latex tool
   - `yt-dlp` to watch your stuff
-  - Some common power tools: `plocate`, `fzf`, `cosign`, `ripgrep`, `detox` and `ffmpeg`
+  - Some common power tools: `plocate`, `fzf`, `fd`, `cosign`, `ripgrep`, `zoxide`, `detox`, `ffmpeg`, and `aria2`
 - Host Management QoL
   - These are meant for occasional one off commands, not complex workflows
     - Auto symlink the flatpak, podman, and docker commands
