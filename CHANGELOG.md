@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/storopoli/EDC/compare/v2.4.1...v3.0.0) (2023-05-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* minimal setup ([#32](https://github.com/storopoli/EDC/issues/32))
+
+### Features
+
+* minimal setup ([#32](https://github.com/storopoli/EDC/issues/32)) ([f18999f](https://github.com/storopoli/EDC/commit/f18999f7f67b4ff042d1a6ddee97b04006679806))
+
+
+### Bug Fixes
+
+* readme update ([f40b80a](https://github.com/storopoli/EDC/commit/f40b80aff2c6f75eec185810a7fd3c7db06ee142))
+
 ## [2.4.1](https://github.com/storopoli/EDC/compare/v2.4.0...v2.4.1) (2023-04-11)
 
 
